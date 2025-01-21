@@ -14,8 +14,9 @@ async function getData() {
   );
   const data = await response.json();
   console.log(data.stargazers_count);
+  const heading = document.createElement("h1");
+  heading.innerText = data.stargazers_count;
+  document.body.appendChild(heading);
 }
-getData();
 
-const heading = document.createElement("h1");
-heading.innerText = data.stargazers_count;
+getData();
